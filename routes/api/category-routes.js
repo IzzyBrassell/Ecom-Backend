@@ -53,8 +53,30 @@ router.post('/api/categories', (req, res) => {
   });
 });
 
-router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+router.put('/api/categories/:id', (req, res) => {
+  // Get the ID of the category to update from the request parameters
+  const categoryId = req.params.id;
+
+  // Use the `update()` method to update the category in the database
+  Category.update(req.body, {
+    where: {
+      id: categoryId
+    }
+  })
+  .then((updatedCategory) => {
+    // Check if any rows were affected by the update operation
+    if (updatedCategory[0] === 0) {
+      res.status(404).json({ message: 'Category not found' });
+    } else {
+      // If at least one row was affected, send a response indicating success
+      res.status(200).json({ message: 'Category updated successfully' });
+    }
+  })
+  .catch((err) => {
+    // If an error occurred, send a response with an error message and status code 500
+    console.log(err);
+    res.status(500).json({ message: 'Server error' });
+  });
 });
 
 router.delete('/api/categories:id', (req, res) => {
