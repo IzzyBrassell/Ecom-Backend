@@ -33,3 +33,20 @@ THEN I am able to successfully create, update, and delete data in my database
 ```
 
  ## Walkthrough Video
+
+
+https://user-images.githubusercontent.com/115316007/225950227-d33e5dde-ab45-40a6-9e60-1b4d86b79169.mp4
+
+
+
+
+
+https://user-images.githubusercontent.com/115316007/225950292-3c816da8-ef4d-4eac-8eee-4eb5cee65abf.mp4
+
+
+
+
+https://user-images.githubusercontent.com/115316007/225950736-9ff6b564-723a-4acf-9e1e-a001e2b670e8.mp4
+
+
+
